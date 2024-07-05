@@ -105,8 +105,7 @@ div.card-header{
     }
     .main{
         min-height: 100vh; 
-        left:13.9%;
-        width: 100%;
+        left:60%;
     }
 }
 #toggle-btn{
