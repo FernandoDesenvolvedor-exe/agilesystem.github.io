@@ -46,8 +46,10 @@ menu.addEventListener("click", function(event){
             main.style.left = '4.8%';
             main.style.width = '95%';
             sessionStorage.setItem('menuOpen', false);
-        }  
-    } 
+        } 
+    } else {
+        main.style.left = '4.8%';
+    }
 });
 
 function ativaItem(element){    
