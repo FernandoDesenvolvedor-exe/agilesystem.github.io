@@ -38,7 +38,7 @@ body{
 
 #sidebar.expand{
     width: 20%;
-    min-width: 15%;
+    min-width: 20%;
 }
 
 .active{
@@ -69,16 +69,17 @@ div.card-header{
 .main{
     position: absolute;
     overflow-y: auto;
+    left: 4.8%;
+    width: 95%;  
     min-height: 100vh; 
     transition: all 0.35s ease-in-out;
     background-color:rgb(245, 245, 245);
 }
 
-@media (min-width: 769px){
-    .main{
-        left: 4.8%!important;
-        width: 95%!important;    
-    }
+#principal.expand{
+    left: 20%;
+    width: 80%; 
+    transition: all 0.35s ease-out;
 }
 
 @media (max-width: 768px){
@@ -94,8 +95,14 @@ div.card-header{
     
     .main{
         min-height: 100vh; 
-        left:10%!important;
-        width: 90%!important;
+        left:10%;
+        width: 90%;
+    }
+
+    #principal.expand{
+        left: 40%;
+        width: 60%; 
+        transition: all 0.35s ease-out;
     }
 }
 
@@ -109,11 +116,18 @@ div.card-header{
         min-width: 60%;    
     }
     .main{
-        min-height: 100vh!important; 
-        left:13.9%!important;
-        width: 86%!important;
+        min-height: 100vh; 
+        left:13.9%;
+        width: 86%;
+    }
+
+    #principal.expand{
+        left: 13.9%;
+        width: 86%; 
+        transition: all 0.35s ease-out;
     }
 }
+
 #toggle-btn{
     background-color: transparent;
     cursor: pointer;
