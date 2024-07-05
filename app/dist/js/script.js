@@ -49,6 +49,7 @@ menu.addEventListener("click", function(event){
         } 
     } else {
         main.style.left = '4.8%';
+        main.style.width = '95%';
     }
 });
 
