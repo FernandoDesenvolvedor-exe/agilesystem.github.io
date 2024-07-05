@@ -35,8 +35,6 @@ dropdown.addEventListener('click', function(){
 
 menu.addEventListener("click", function(event){
 
-    alert(janela);
-    
     document.querySelector("#sidebar").classList.toggle("expand");
 
     if(janela > 576){
