@@ -66,16 +66,18 @@ div.card-header{
     margin-top: 2%;
 }
 
+.main{
+    position: absolute;
+    overflow-y: auto;
+    min-height: 100vh; 
+    transition: all 0.35s ease-in-out;
+    background-color:rgb(245, 245, 245);
+}
 
-@media (min-width: 768px){
+@media (min-width: 769px){
     .main{
-        position: absolute;
-        left: 4.8%;
-        width: 95%;    
-        overflow-y: auto;
-        min-height: 100vh; 
-        transition: all 0.35s ease-in-out;
-        background-color:rgb(245, 245, 245);
+        left: 4.8%!important;
+        width: 95%!important;    
     }
 }
 
@@ -92,8 +94,8 @@ div.card-header{
     
     .main{
         min-height: 100vh; 
-        left:10%;
-        width: 100%;
+        left:10%!important;
+        width: 90%!important;
     }
 }
 
@@ -107,8 +109,9 @@ div.card-header{
         min-width: 60%;    
     }
     .main{
-        min-height: 100vh; 
-        left:13.9%;
+        min-height: 100vh!important; 
+        left:13.9%!important;
+        width: 86%!important;
     }
 }
 #toggle-btn{
