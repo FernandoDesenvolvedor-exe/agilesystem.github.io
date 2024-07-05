@@ -93,348 +93,355 @@
         
         <div id="principal" class="main">
             <div class="container">
-                <h3 class="text-center">Monitoramento de Gastos</h3>
-                <input class="form-control mb-3" id="searchInput" type="text" placeholder="Procurar Motorista">
-
-                <div style="height: calc(100vh - 160px); overflow-y: auto; overflow-x: auto;">
-                    <table class="table table-striped" id="namesTable">
-                        <thead>
-                            <tr>
-                                <th>ID</th>
-                                <th>Nome</th>
-                                <th>CPF</th>
-                                <th>Data de Nascimento</th>
-                                <th>Ações</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>1</td>
-                                <td>Miguel Duflow</td>
-                                <td>123.456.789-00</td>
-                                <td>10/05/1989</td>
-                                <td>
-                                    <button class="btn btn-primary btn-sm open-modal" data-bs-toggle="modal" data-bs-target="#motoristaModal" data-name="Miguel Duflow">Exibir</button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>2</td>
-                                <td>Alysson Anderle</td>
-                                <td>234.567.890-11</td>
-                                <td>15/09/1995</td>
-                                <td>
-                                    <button class="btn btn-primary btn-sm open-modal" data-bs-toggle="modal" data-bs-target="#motoristaModal" data-name="Alysson Anderle">Exibir</button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>3</td>
-                                <td>Miguel Huertas</td>
-                                <td>345.678.901-22</td>
-                                <td>20/11/1980</td>
-                                <td>
-                                    <button class="btn btn-primary btn-sm open-modal" data-bs-toggle="modal" data-bs-target="#motoristaModal" data-name="Miguel Huertas">Exibir</button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>4</td>
-                                <td>Rickelme Zóio</td>
-                                <td>456.789.012-33</td>
-                                <td>03/04/1992</td>
-                                <td>
-                                    <button class="btn btn-primary btn-sm open-modal" data-bs-toggle="modal" data-bs-target="#motoristaModal" data-name="Rickelme Zóio">Exibir</button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>5</td>
-                                <td>Felipe Sena</td>
-                                <td>567.890.123-44</td>
-                                <td>28/07/1987</td>
-                                <td>
-                                    <button class="btn btn-primary btn-sm open-modal" data-bs-toggle="modal" data-bs-target="#motoristaModal" data-name="Felipe Sena">Exibir</button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>6</td>
-                                <td>Luis Fernando</td>
-                                <td>678.901.234-55</td>
-                                <td>12/12/1998</td>
-                                <td>
-                                    <button class="btn btn-primary btn-sm open-modal" data-bs-toggle="modal" data-bs-target="#motoristaModal" data-name="Luis Fernando">Exibir</button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>7</td>
-                                <td>Rafaela Ferreira</td>
-                                <td>789.012.345-66</td>
-                                <td>05/03/1985</td>
-                                <td>
-                                    <button class="btn btn-primary btn-sm open-modal" data-bs-toggle="modal" data-bs-target="#motoristaModal" data-name="Rafaela Ferreira">Exibir</button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>8</td>
-                                <td>Guilherme Almeida</td>
-                                <td>890.123.456-77</td>
-                                <td>18/08/1990</td>
-                                <td>
-                                    <button class="btn btn-primary btn-sm open-modal" data-bs-toggle="modal" data-bs-target="#motoristaModal" data-name="Guilherme Almeida">Exibir</button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>9</td>
-                                <td>Sofia Gonçalves</td>
-                                <td>901.234.567-88</td>
-                                <td>30/06/1983</td>
-                                <td>
-                                    <button class="btn btn-primary btn-sm open-modal" data-bs-toggle="modal" data-bs-target="#motoristaModal" data-name="Sofia Gonçalves">Exibir</button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>10</td>
-                                <td>Paulo Santos</td>
-                                <td>012.345.678-99</td>
-                                <td>25/01/1977</td>
-                                <td>
-                                    <button class="btn btn-primary btn-sm open-modal" data-bs-toggle="modal" data-bs-target="#motoristaModal" data-name="Paulo Santos">Exibir</button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>11</td>
-                                <td>Isabela Lima</td>
-                                <td>123.234.345-00</td>
-                                <td>08/07/1996</td>
-                                <td>
-                                    <button class="btn btn-primary btn-sm open-modal" data-bs-toggle="modal" data-bs-target="#motoristaModal" data-name="Isabela Lima">Exibir</button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>12</td>
-                                <td>Lucas Pereira</td>
-                                <td>234.345.456-11</td>
-                                <td>14/02/1982</td>
-                                <td>
-                                    <button class="btn btn-primary btn-sm open-modal" data-bs-toggle="modal" data-bs-target="#motoristaModal" data-name="Lucas Pereira">Exibir</button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>13</td>
-                                <td>Jéssica Oliveira</td>
-                                <td>345.456.567-22</td>
-                                <td>19/09/1993</td>
-                                <td>
-                                    <button class="btn btn-primary btn-sm open-modal" data-bs-toggle="modal" data-bs-target="#motoristaModal" data-name="Jéssica Oliveira">Exibir</button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>14</td>
-                                <td>Rodrigo Alves</td>
-                                <td>456.567.678-33</td>
-                                <td>27/03/1986</td>
-                                <td>
-                                    <button class="btn btn-primary btn-sm open-modal" data-bs-toggle="modal" data-bs-target="#motoristaModal" data-name="Rodrigo Alves">Exibir</button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>15</td>
-                                <td>Carolina Costa</td>
-                                <td>567.678.789-44</td>
-                                <td>05/11/1984</td>
-                                <td>
-                                    <button class="btn btn-primary btn-sm open-modal" data-bs-toggle="modal" data-bs-target="#motoristaModal" data-name="Carolina Costa">Exibir</button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>16</td>
-                                <td>Diego Ferreira</td>
-                                <td>678.789.890-55</td>
-                                <td>10/08/1997</td>
-                                <td>
-                                    <button class="btn btn-primary btn-sm open-modal" data-bs-toggle="modal" data-bs-target="#motoristaModal" data-name="Diego Ferreira">Exibir</button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>17</td>
-                                <td>Fernanda Santos</td>
-                                <td>789.890.901-66</td>
-                                <td>15/02/1981</td>
-                                <td>
-                                    <button class="btn btn-primary btn-sm open-modal" data-bs-toggle="modal" data-bs-target="#motoristaModal" data-name="Fernanda Santos">Exibir</button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>18</td>
-                                <td>Marcelo Lima</td>
-                                <td>890.901.012-77</td>
-                                <td>23/06/1989</td>
-                                <td>
-                                    <button class="btn btn-primary btn-sm open-modal" data-bs-toggle="modal" data-bs-target="#motoristaModal" data-name="Marcelo Lima">Exibir</button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>19</td>
-                                <td>Gabriela Oliveira</td>
-                                <td>901.012.123-88</td>
-                                <td>07/04/1983</td>
-                                <td>
-                                    <button class="btn btn-primary btn-sm open-modal" data-bs-toggle="modal" data-bs-target="#motoristaModal" data-name="Gabriela Oliveira">Exibir</button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>20</td>
-                                <td>Bruno Costa</td>
-                                <td>012.123.234-99</td>
-                                <td>14/11/1992</td>
-                                <td>
-                                    <button class="btn btn-primary btn-sm open-modal" data-bs-toggle="modal" data-bs-target="#motoristaModal" data-name="Bruno Costa">Exibir</button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>21</td>
-                                <td>Leticia Almeida</td>
-                                <td>123.234.345-10</td>
-                                <td>21/05/1988</td>
-                                <td>
-                                    <button class="btn btn-primary btn-sm open-modal" data-bs-toggle="modal" data-bs-target="#motoristaModal" data-name="Leticia Almeida">Exibir</button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>22</td>
-                                <td>Rodrigo Santos</td>
-                                <td>234.345.456-21</td>
-                                <td>17/09/1994</td>
-                                <td>
-                                    <button class="btn btn-primary btn-sm open-modal" data-bs-toggle="modal" data-bs-target="#motoristaModal" data-name="Rodrigo Santos">Exibir</button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>23</td>
-                                <td>Patricia Fernandes</td>
-                                <td>345.456.567-32</td>
-                                <td>28/03/1985</td>
-                                <td>
-                                    <button class="btn btn-primary btn-sm open-modal" data-bs-toggle="modal" data-bs-target="#motoristaModal" data-name="Patricia Fernandes">Exibir</button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>24</td>
-                                <td>Renato Lima</td>
-                                <td>456.567.678-43</td>
-                                <td>09/07/1990</td>
-                                <td>
-                                    <button class="btn btn-primary btn-sm open-modal" data-bs-toggle="modal" data-bs-target="#motoristaModal" data-name="Renato Lima">Exibir</button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>25</td>
-                                <td>Fernanda Oliveira</td>
-                                <td>567.678.789-54</td>
-                                <td>25/11/1983</td>
-                                <td>
-                                    <button class="btn btn-primary btn-sm open-modal" data-bs-toggle="modal" data-bs-target="#motoristaModal" data-name="Fernanda Oliveira">Exibir</button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>26</td>
-                                <td>Leandro Silva</td>
-                                <td>678.789.890-65</td>
-                                <td>02/08/1996</td>
-                                <td>
-                                    <button class="btn btn-primary btn-sm open-modal" data-bs-toggle="modal" data-bs-target="#motoristaModal" data-name="Leandro Silva">Exibir</button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>27</td>
-                                <td>Bianca Gonçalves</td>
-                                <td>789.890.901-76</td>
-                                <td>15/03/1982</td>
-                                <td>
-                                    <button class="btn btn-primary btn-sm open-modal" data-bs-toggle="modal" data-bs-target="#motoristaModal" data-name="Bianca Gonçalves">Exibir</button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>28</td>
-                                <td>Rafael Martins</td>
-                                <td>890.901.012-87</td>
-                                <td>03/07/1988</td>
-                                <td>
-                                    <button class="btn btn-primary btn-sm open-modal" data-bs-toggle="modal" data-bs-target="#motoristaModal" data-name="Rafael Martins">Exibir</button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>29</td>
-                                <td>Camila Santos</td>
-                                <td>901.012.123-98</td>
-                                <td>19/04/1981</td>
-                                <td>
-                                    <button class="btn btn-primary btn-sm open-modal" data-bs-toggle="modal" data-bs-target="#motoristaModal" data-name="Camila Santos">Exibir</button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>30</td>
-                                <td>Thiago Oliveira</td>
-                                <td>012.123.234-09</td>
-                                <td>06/12/1993</td>
-                                <td>
-                                    <button class="btn btn-primary btn-sm open-modal" data-bs-toggle="modal" data-bs-target="#motoristaModal" data-name="Thiago Oliveira">Exibir</button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>31</td>
-                                <td>Natalia Costa</td>
-                                <td>123.234.345-20</td>
-                                <td>11/06/1987</td>
-                                <td>
-                                    <button class="btn btn-primary btn-sm open-modal" data-bs-toggle="modal" data-bs-target="#motoristaModal" data-name="Natalia Costa">Exibir</button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>32</td>
-                                <td>André Pereira</td>
-                                <td>234.345.456-31</td>
-                                <td>27/02/1984</td>
-                                <td>
-                                    <button class="btn btn-primary btn-sm open-modal" data-bs-toggle="modal" data-bs-target="#motoristaModal" data-name="André Pereira">Exibir</button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>33</td>
-                                <td>Vanessa Rodrigues</td>
-                                <td>345.456.567-42</td>
-                                <td>10/10/1991</td>
-                                <td>
-                                    <button class="btn btn-primary btn-sm open-modal" data-bs-toggle="modal" data-bs-target="#motoristaModal" data-name="Vanessa Rodrigues">Exibir</button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>34</td>
-                                <td>Lucas Fernandes</td>
-                                <td>456.567.678-53</td>
-                                <td>22/04/1986</td>
-                                <td>
-                                    <button class="btn btn-primary btn-sm open-modal" data-bs-toggle="modal" data-bs-target="#motoristaModal" data-name="Lucas Fernandes">Exibir</button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>35</td>
-                                <td>Carla Lima</td>
-                                <td>567.678.789-64</td>
-                                <td>04/08/1995</td>
-                                <td>
-                                    <button class="btn btn-primary btn-sm open-modal" data-bs-toggle="modal" data-bs-target="#motoristaModal" data-name="Carla Lima">Exibir</button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>36</td>
-                                <td>Marcos Oliveira</td>
-                                <td>678.789.890-75</td>
-                                <td>09/01/1980</td>
-                                <td>
-                                    <button class="btn btn-primary btn-sm open-modal" data-bs-toggle="modal" data-bs-target="#motoristaModal" data-name="Marcos Oliveira">Exibir</button>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
+                <div class="card">
+                    <div class="card-header bg-white text-dark">                        
+                        <h3 class="text-center">Monitoramento de Gastos</h3>
+                        <input class="form-control mb-3" id="searchInput" type="text" placeholder="Procurar Motorista">
+                    </div>
+                    <div class="card-body">
+                        <div style="height: calc(100vh - 160px); overflow-y: auto; overflow-x: auto;">
+                            <table class="table table-striped" id="namesTable">
+                                <thead>
+                                    <tr>
+                                        <th>ID</th>
+                                        <th>Nome</th>
+                                        <th>CPF</th>
+                                        <th>Data de Nascimento</th>
+                                        <th>Ações</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>Miguel Duflow</td>
+                                        <td>123.456.789-00</td>
+                                        <td>10/05/1989</td>
+                                        <td>
+                                            <button class="btn btn-primary btn-sm open-modal" data-bs-toggle="modal" data-bs-target="#motoristaModal" data-name="Miguel Duflow">Exibir</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td>Alysson Anderle</td>
+                                        <td>234.567.890-11</td>
+                                        <td>15/09/1995</td>
+                                        <td>
+                                            <button class="btn btn-primary btn-sm open-modal" data-bs-toggle="modal" data-bs-target="#motoristaModal" data-name="Alysson Anderle">Exibir</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>3</td>
+                                        <td>Miguel Huertas</td>
+                                        <td>345.678.901-22</td>
+                                        <td>20/11/1980</td>
+                                        <td>
+                                            <button class="btn btn-primary btn-sm open-modal" data-bs-toggle="modal" data-bs-target="#motoristaModal" data-name="Miguel Huertas">Exibir</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>4</td>
+                                        <td>Rickelme Zóio</td>
+                                        <td>456.789.012-33</td>
+                                        <td>03/04/1992</td>
+                                        <td>
+                                            <button class="btn btn-primary btn-sm open-modal" data-bs-toggle="modal" data-bs-target="#motoristaModal" data-name="Rickelme Zóio">Exibir</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>5</td>
+                                        <td>Felipe Sena</td>
+                                        <td>567.890.123-44</td>
+                                        <td>28/07/1987</td>
+                                        <td>
+                                            <button class="btn btn-primary btn-sm open-modal" data-bs-toggle="modal" data-bs-target="#motoristaModal" data-name="Felipe Sena">Exibir</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>6</td>
+                                        <td>Luis Fernando</td>
+                                        <td>678.901.234-55</td>
+                                        <td>12/12/1998</td>
+                                        <td>
+                                            <button class="btn btn-primary btn-sm open-modal" data-bs-toggle="modal" data-bs-target="#motoristaModal" data-name="Luis Fernando">Exibir</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>7</td>
+                                        <td>Rafaela Ferreira</td>
+                                        <td>789.012.345-66</td>
+                                        <td>05/03/1985</td>
+                                        <td>
+                                            <button class="btn btn-primary btn-sm open-modal" data-bs-toggle="modal" data-bs-target="#motoristaModal" data-name="Rafaela Ferreira">Exibir</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>8</td>
+                                        <td>Guilherme Almeida</td>
+                                        <td>890.123.456-77</td>
+                                        <td>18/08/1990</td>
+                                        <td>
+                                            <button class="btn btn-primary btn-sm open-modal" data-bs-toggle="modal" data-bs-target="#motoristaModal" data-name="Guilherme Almeida">Exibir</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>9</td>
+                                        <td>Sofia Gonçalves</td>
+                                        <td>901.234.567-88</td>
+                                        <td>30/06/1983</td>
+                                        <td>
+                                            <button class="btn btn-primary btn-sm open-modal" data-bs-toggle="modal" data-bs-target="#motoristaModal" data-name="Sofia Gonçalves">Exibir</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>10</td>
+                                        <td>Paulo Santos</td>
+                                        <td>012.345.678-99</td>
+                                        <td>25/01/1977</td>
+                                        <td>
+                                            <button class="btn btn-primary btn-sm open-modal" data-bs-toggle="modal" data-bs-target="#motoristaModal" data-name="Paulo Santos">Exibir</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>11</td>
+                                        <td>Isabela Lima</td>
+                                        <td>123.234.345-00</td>
+                                        <td>08/07/1996</td>
+                                        <td>
+                                            <button class="btn btn-primary btn-sm open-modal" data-bs-toggle="modal" data-bs-target="#motoristaModal" data-name="Isabela Lima">Exibir</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>12</td>
+                                        <td>Lucas Pereira</td>
+                                        <td>234.345.456-11</td>
+                                        <td>14/02/1982</td>
+                                        <td>
+                                            <button class="btn btn-primary btn-sm open-modal" data-bs-toggle="modal" data-bs-target="#motoristaModal" data-name="Lucas Pereira">Exibir</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>13</td>
+                                        <td>Jéssica Oliveira</td>
+                                        <td>345.456.567-22</td>
+                                        <td>19/09/1993</td>
+                                        <td>
+                                            <button class="btn btn-primary btn-sm open-modal" data-bs-toggle="modal" data-bs-target="#motoristaModal" data-name="Jéssica Oliveira">Exibir</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>14</td>
+                                        <td>Rodrigo Alves</td>
+                                        <td>456.567.678-33</td>
+                                        <td>27/03/1986</td>
+                                        <td>
+                                            <button class="btn btn-primary btn-sm open-modal" data-bs-toggle="modal" data-bs-target="#motoristaModal" data-name="Rodrigo Alves">Exibir</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>15</td>
+                                        <td>Carolina Costa</td>
+                                        <td>567.678.789-44</td>
+                                        <td>05/11/1984</td>
+                                        <td>
+                                            <button class="btn btn-primary btn-sm open-modal" data-bs-toggle="modal" data-bs-target="#motoristaModal" data-name="Carolina Costa">Exibir</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>16</td>
+                                        <td>Diego Ferreira</td>
+                                        <td>678.789.890-55</td>
+                                        <td>10/08/1997</td>
+                                        <td>
+                                            <button class="btn btn-primary btn-sm open-modal" data-bs-toggle="modal" data-bs-target="#motoristaModal" data-name="Diego Ferreira">Exibir</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>17</td>
+                                        <td>Fernanda Santos</td>
+                                        <td>789.890.901-66</td>
+                                        <td>15/02/1981</td>
+                                        <td>
+                                            <button class="btn btn-primary btn-sm open-modal" data-bs-toggle="modal" data-bs-target="#motoristaModal" data-name="Fernanda Santos">Exibir</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>18</td>
+                                        <td>Marcelo Lima</td>
+                                        <td>890.901.012-77</td>
+                                        <td>23/06/1989</td>
+                                        <td>
+                                            <button class="btn btn-primary btn-sm open-modal" data-bs-toggle="modal" data-bs-target="#motoristaModal" data-name="Marcelo Lima">Exibir</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>19</td>
+                                        <td>Gabriela Oliveira</td>
+                                        <td>901.012.123-88</td>
+                                        <td>07/04/1983</td>
+                                        <td>
+                                            <button class="btn btn-primary btn-sm open-modal" data-bs-toggle="modal" data-bs-target="#motoristaModal" data-name="Gabriela Oliveira">Exibir</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>20</td>
+                                        <td>Bruno Costa</td>
+                                        <td>012.123.234-99</td>
+                                        <td>14/11/1992</td>
+                                        <td>
+                                            <button class="btn btn-primary btn-sm open-modal" data-bs-toggle="modal" data-bs-target="#motoristaModal" data-name="Bruno Costa">Exibir</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>21</td>
+                                        <td>Leticia Almeida</td>
+                                        <td>123.234.345-10</td>
+                                        <td>21/05/1988</td>
+                                        <td>
+                                            <button class="btn btn-primary btn-sm open-modal" data-bs-toggle="modal" data-bs-target="#motoristaModal" data-name="Leticia Almeida">Exibir</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>22</td>
+                                        <td>Rodrigo Santos</td>
+                                        <td>234.345.456-21</td>
+                                        <td>17/09/1994</td>
+                                        <td>
+                                            <button class="btn btn-primary btn-sm open-modal" data-bs-toggle="modal" data-bs-target="#motoristaModal" data-name="Rodrigo Santos">Exibir</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>23</td>
+                                        <td>Patricia Fernandes</td>
+                                        <td>345.456.567-32</td>
+                                        <td>28/03/1985</td>
+                                        <td>
+                                            <button class="btn btn-primary btn-sm open-modal" data-bs-toggle="modal" data-bs-target="#motoristaModal" data-name="Patricia Fernandes">Exibir</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>24</td>
+                                        <td>Renato Lima</td>
+                                        <td>456.567.678-43</td>
+                                        <td>09/07/1990</td>
+                                        <td>
+                                            <button class="btn btn-primary btn-sm open-modal" data-bs-toggle="modal" data-bs-target="#motoristaModal" data-name="Renato Lima">Exibir</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>25</td>
+                                        <td>Fernanda Oliveira</td>
+                                        <td>567.678.789-54</td>
+                                        <td>25/11/1983</td>
+                                        <td>
+                                            <button class="btn btn-primary btn-sm open-modal" data-bs-toggle="modal" data-bs-target="#motoristaModal" data-name="Fernanda Oliveira">Exibir</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>26</td>
+                                        <td>Leandro Silva</td>
+                                        <td>678.789.890-65</td>
+                                        <td>02/08/1996</td>
+                                        <td>
+                                            <button class="btn btn-primary btn-sm open-modal" data-bs-toggle="modal" data-bs-target="#motoristaModal" data-name="Leandro Silva">Exibir</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>27</td>
+                                        <td>Bianca Gonçalves</td>
+                                        <td>789.890.901-76</td>
+                                        <td>15/03/1982</td>
+                                        <td>
+                                            <button class="btn btn-primary btn-sm open-modal" data-bs-toggle="modal" data-bs-target="#motoristaModal" data-name="Bianca Gonçalves">Exibir</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>28</td>
+                                        <td>Rafael Martins</td>
+                                        <td>890.901.012-87</td>
+                                        <td>03/07/1988</td>
+                                        <td>
+                                            <button class="btn btn-primary btn-sm open-modal" data-bs-toggle="modal" data-bs-target="#motoristaModal" data-name="Rafael Martins">Exibir</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>29</td>
+                                        <td>Camila Santos</td>
+                                        <td>901.012.123-98</td>
+                                        <td>19/04/1981</td>
+                                        <td>
+                                            <button class="btn btn-primary btn-sm open-modal" data-bs-toggle="modal" data-bs-target="#motoristaModal" data-name="Camila Santos">Exibir</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>30</td>
+                                        <td>Thiago Oliveira</td>
+                                        <td>012.123.234-09</td>
+                                        <td>06/12/1993</td>
+                                        <td>
+                                            <button class="btn btn-primary btn-sm open-modal" data-bs-toggle="modal" data-bs-target="#motoristaModal" data-name="Thiago Oliveira">Exibir</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>31</td>
+                                        <td>Natalia Costa</td>
+                                        <td>123.234.345-20</td>
+                                        <td>11/06/1987</td>
+                                        <td>
+                                            <button class="btn btn-primary btn-sm open-modal" data-bs-toggle="modal" data-bs-target="#motoristaModal" data-name="Natalia Costa">Exibir</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>32</td>
+                                        <td>André Pereira</td>
+                                        <td>234.345.456-31</td>
+                                        <td>27/02/1984</td>
+                                        <td>
+                                            <button class="btn btn-primary btn-sm open-modal" data-bs-toggle="modal" data-bs-target="#motoristaModal" data-name="André Pereira">Exibir</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>33</td>
+                                        <td>Vanessa Rodrigues</td>
+                                        <td>345.456.567-42</td>
+                                        <td>10/10/1991</td>
+                                        <td>
+                                            <button class="btn btn-primary btn-sm open-modal" data-bs-toggle="modal" data-bs-target="#motoristaModal" data-name="Vanessa Rodrigues">Exibir</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>34</td>
+                                        <td>Lucas Fernandes</td>
+                                        <td>456.567.678-53</td>
+                                        <td>22/04/1986</td>
+                                        <td>
+                                            <button class="btn btn-primary btn-sm open-modal" data-bs-toggle="modal" data-bs-target="#motoristaModal" data-name="Lucas Fernandes">Exibir</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>35</td>
+                                        <td>Carla Lima</td>
+                                        <td>567.678.789-64</td>
+                                        <td>04/08/1995</td>
+                                        <td>
+                                            <button class="btn btn-primary btn-sm open-modal" data-bs-toggle="modal" data-bs-target="#motoristaModal" data-name="Carla Lima">Exibir</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>36</td>
+                                        <td>Marcos Oliveira</td>
+                                        <td>678.789.890-75</td>
+                                        <td>09/01/1980</td>
+                                        <td>
+                                            <button class="btn btn-primary btn-sm open-modal" data-bs-toggle="modal" data-bs-target="#motoristaModal" data-name="Marcos Oliveira">Exibir</button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
                 </div>
+
+
             </div>
         </div>
     </div>
