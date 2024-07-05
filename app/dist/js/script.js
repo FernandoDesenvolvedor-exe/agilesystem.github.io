@@ -6,6 +6,7 @@ const janela = window.innerWidth;
 if(sessionStorage.getItem('menuOpen') == 'true'){
     document.querySelector("#sidebar").classList.add("expand");
     document.querySelector('#principal').classList.toggle("expand");
+    document.querySelector('#map_6146f48e63c26298b0cdfeb6cf7cb288').classList.toggle("expand");
 }
 
 if(sessionStorage.getItem('menu_dropdown') == 'true'){
@@ -22,6 +23,7 @@ menu.addEventListener("click", function(event){
 
     document.querySelector("#sidebar").classList.toggle("expand");
     document.querySelector('#principal').classList.toggle("expand");
+    document.querySelector('#map_6146f48e63c26298b0cdfeb6cf7cb288').classList.toggle("expand");
 
 });
 

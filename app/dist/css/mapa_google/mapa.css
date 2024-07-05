@@ -1,0 +1,59 @@
+.mapa{
+    position: absolute;
+    left: 4.8%;
+    top: 35%!important;
+    width: 95%;  
+    transition: all 0.35s ease-in-out;
+}
+
+#map_6146f48e63c26298b0cdfeb6cf7cb288.expand{
+    left: 20%;
+    width: 80%; 
+    transition: all 0.35s ease-out;
+}
+
+@media (max-width: 1200px){
+
+    .mapa{
+        min-height: 100vh; 
+        left:8%;
+        width: 92%;
+    }
+
+    #map_6146f48e63c26298b0cdfeb6cf7cb288.expand{
+        left: 30%;
+        width: 70%; 
+        transition: all 0.35s ease-out;
+    }
+}
+
+@media (max-width: 768px){    
+    .mapa{
+        min-height: 100vh; 
+        left:10%;
+        width: 90%;
+        top: 40%!important;
+    }
+
+    #map_6146f48e63c26298b0cdfeb6cf7cb288.expand{
+        left: 10%;
+        width: 90%; 
+        transition: all 0.35s ease-out;
+    }
+}
+
+@media (max-width: 576px){
+
+    .mapa{
+        min-height: 100vh; 
+        left:13.9%;
+        width: 86%;
+        top: 40%!important;
+    }
+
+    #map_6146f48e63c26298b0cdfeb6cf7cb288.expand{
+        left: 13.9%;
+        width: 86%; 
+        transition: all 0.35s ease-out;
+    }
+}

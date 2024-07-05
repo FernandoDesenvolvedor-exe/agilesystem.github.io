@@ -24,10 +24,11 @@
     <link href="https://cdn.lineicons.com/4.0/lineicons.css" rel="stylesheet" />
     <!-- BOOTSTRAP CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="dist/css/style.css">        
     <link rel="icon" type="image/png" sizes="16x16" href="dist/img/index/cabecalho.png">   
-    <!-- BOOTSTRAP LOCAL -->
-    <link rel="stylesheet" type="text/css" href="dist/css/style.css">        
+
     <link rel="stylesheet" type="text/css" href="dist/css/mapa_google/main.css">
+    <link rel="stylesheet" type="text/css" href="dist/css/mapa_google/mapa.css">
     <link rel="stylesheet" type="text/css" href="dist/css/mapa_google/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="dist/css/mapa_google/font-aweseome.min.css">
     
@@ -35,24 +36,22 @@
         L_NO_TOUCH = false;
         L_DISABLE_3D = false;
     </script>
-            <meta name="viewport" content="width=device-width,
-                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-            <style>
-                #map_6146f48e63c26298b0cdfeb6cf7cb288 {
-                    position: relative;
-                    width: 95%;
-                    height: 60%;
-                    left: 5%;
-                    top: 2%;
-                }
-                .leaflet-container { font-size: 1rem; }
-            </style>
-        
+    <meta name="viewport" content="width=device-width,
+        initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <style>
+        #map_6146f48e63c26298b0cdfeb6cf7cb288 {
+            position: relative;
+            width: 95%;
+            height: 60%;
+            left: 5%;
+            top: 2%;
+        }
+    .leaflet-container { font-size: 1rem; } 
+    </style>        
 </head>
 <body>
     <div class="wrapper">            
         <aside id="sidebar">
-
             <div class="d-flex" id="menu_logo">
                 <button id="toggle-btn" type="button">
                     <i class="lni lni-menu"></i>
@@ -63,7 +62,6 @@
                     </a>
                 </div> 
             </div>
-
             <ul class="sidebar-nav">
                 <li class="sidebar-item">
                     <a href="#" class="sidebar-link">
@@ -110,480 +108,481 @@
                     <span>Sair</span>
                 </a>
             </div>
-
         </aside>
-        </div>
         <div id="principal" class="main">
             <div class="row">
-                <div class="col-md-6">               
+                <div class="col-xl-10 col-lg-10 col-md-10 col-sm-10">     
+                    <div class="col-xl-6 col-lg-8 col-md-8 col-sm-8 feature">
+                        <h4 style="color:#00689D">
+                            Selecione o motorista<br>
+                            <b style="color:#00689D">Motoristas</b>, e rastreie a sua 
+                        </h4>
+                        <p><b style="background-color:#00689D;color:white;font-size:1.5em">Rota</b></p><br>
+                        
+                        <select id="seletorCombo" style="width: 50%;">
+                            <option>Selecione o Motorista</option>
+                            <option value="1">Alisson Anderle</option>
+                            <option value="2">Carlos Andrade</option>
+                            <option value="3">Fernanda Souza</option>
+                            <option value="4">Bruno Lima</option>
+                            <option value="5">Marina Alves</option>
+                            <option value="6">João Ferreira</option>
+                            <option value="7">Larissa Mendes</option>
+                            <option value="8">Marcelo Tavares</option>
+                            <option value="9">Patrícia Souza</option>
+                            <option value="10">Roberto Silva</option>
+                            <option value="11">Ricardo Oliveira</option>
+                            <option value="12">Eduardo Santos</option>
+                            <option value="13">Amanda Costa</option>
+                            <option value="14">Lucas Oliveira</option>
+                            <option value="15">Juliana Santos</option>
+                            <option value="16">Rodrigo Almeida</option>
+                            <option value="17">Carla Lima</option>
+                            <option value="18">Marcos Silva</option>
+                            <option value="19">Ana Souza</option>
+                            <option value="20">João Pereira</option>
+                            <option value="21">Luana Oliveira</option>
+                            <option value="22">Daniel Santos</option>
+                            <option value="23">Camila Costa</option>
+                            <option value="24">Pedro Oliveira</option>
+                            <option value="25">Mariana Almeida</option>
+                            <option value="26">Gabriel Lima</option>
+                            <option value="27">Fernanda Oliveira</option>
+                        </select>
+        
+                        <h4>Localização <span id="estado"></span>:<h4>
+                    </div>  
                 </div>
-                <div class="col-md-6 feature">
-                    <h4 style="color:#00689D">Selecione um de nossos <br><b style="color:#00689D">Motoristas</b>, e rastreie a sua </h3>
-                    <p><b style="background-color:#00689D;color:white;font-size:1.5em">Rota</b></p><br>
-                    <select id="seletorCombo" style="width: 50%;">
-                    <option>Selecione um Estado</option>
-                    <option value="1">Acre</option>
-                    <option value="2">Alagoas</option>
-                    <option value="3">Amapa</option>
-                    <option value="4">Amazonas</option>
-                    <option value="5">Bahia</option>
-                    <option value="6">Ceara</option>
-                    <option value="7">Distrito Federal</option>
-                    <option value="8">Espirito Santo</option>
-                    <option value="9">Goias</option>
-                    <option value="10">Maranhão</option>
-                    <option value="11">Mato Grosso</option>
-                    <option value="12">Mato Grosso do Sul</option>
-                    <option value="13">Minas Gerais</option>
-                    <option value="14">Para</option>
-                    <option value="15">Paraíba</option>
-                    <option value="16">Parana</option>
-                    <option value="17">Pernambuco</option>
-                    <option value="18">Piaui</option>
-                    <option value="19">Rio de Janeiro</option>
-                    <option value="20">Rio Grande do Norte</option>
-                    <option value="21">Rio Grande do Sul</option>
-                    <option value="22">Rondonia</option>
-                    <option value="23">Roraima</option>
-                    <option value="24">Santa Catarina</option>
-                    <option value="25">Sao Paulo</option>
-                    <option value="26">Sergipe</option>
-                    <option value="27">Tocantins</option>
-                    </select>
-                    <h4>Localização <span id="estado"></span>:<h4>
-                </div>
-            </div>        
-        </div>   
-
-        <div class="folium-map" id="map_6146f48e63c26298b0cdfeb6cf7cb288"></div>    
+            </div>  
+        </div>        
     </div>
         
-</body>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-<script src="dist/js/script.js"></script>   
+    <div class="folium-map mapa" id="map_6146f48e63c26298b0cdfeb6cf7cb288"></div>
 
-<script type="text/javascript" src="dist/js/mapa_google/loader.js"></script>
-<script type="text/javascript" src="dist/js/mapa_google/jsapi.js"></script>
-<script type="text/javascript" src="dist/js/mapa_google/jquery-3.3.1.min.js"></script>
+        
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="dist/js/script.js"></script>   
+    <script type="text/javascript" src="dist/js/mapa_google/loader.js"></script>
+    <script type="text/javascript" src="dist/js/mapa_google/jsapi.js"></script>
+    <script type="text/javascript" src="dist/js/mapa_google/jquery-3.3.1.min.js"></script>
+    <!-- Adicione a biblioteca leaflet-control-geocoder -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.css" />
+    <script src="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-EXAMPLEHASH" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-
-<!-- Adicione a biblioteca leaflet-control-geocoder -->
-<link rel="stylesheet" href="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.css" />
-<script src="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.js"></script>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-EXAMPLEHASH" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-<script>
- // Inicializa o mapa
-var map = L.map("map_6146f48e63c26298b0cdfeb6cf7cb288", {
-    center: [-15.7797, -47.9297], // Centraliza o mapa no Distrito Federal
-    zoom: 5,
-    zoomControl: true,
-    preferCanvas: false,
-});
-
-// Adiciona camada de tiles ao mapa
-L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
-    attribution: "Data by © OpenStreetMap, under ODbL.",
-    maxNativeZoom: 18,
-    maxZoom: 18,
-}).addTo(map);
-
-// Objeto contendo coordenadas dos estados com suas rodovias
-var estadosCoordenadas = {
-    1: {
-        coordenadas: [-9.0238, -70.812],   // Acre
-        rodovia: "BR-364"
-    },
-    2: {
-        coordenadas: [-9.5713, -36.782],   // Alagoas
-        rodovia: "BR-101"
-    },
-    3: {
-        coordenadas: [0.902, -52.003],     // Amapá
-        rodovia: "BR-156"
-    },
-    4: {
-        coordenadas: [-3.4168, -65.856],   // Amazonas
-        rodovia: "BR-319"
-    },
-    5: {
-        coordenadas: [-12.9714, -38.5014], // Bahia
-        rodovia: "BR-116"
-    },
-    6: {
-        coordenadas: [-3.7172, -38.5434],  // Ceará
-        rodovia: "BR-116"
-    },
-    7: {
-        coordenadas: [-15.7797, -47.9297], // Distrito Federal
-        rodovia: "BR-060"
-    },
-    8: {
-        coordenadas: [-19.1834, -40.3089], // Espírito Santo
-        rodovia: "BR-101"
-    },
-    9: {
-        coordenadas: [-16.6869, -49.2643], // Goiás
-        rodovia: "BR-153"
-    },
-    10: {
-        coordenadas: [-2.5387, -44.2825],  // Maranhão
-        rodovia: "BR-135"
-    },
-    11: {
-        coordenadas: [-12.6819, -56.9211], // Mato Grosso
-        rodovia: "BR-163"
-    },
-    12: {
-        coordenadas: [-20.4435, -54.6478], // Mato Grosso do Sul
-        rodovia: "BR-163"
-    },
-    13: {
-        coordenadas: [-19.9167, -43.9345], // Minas Gerais
-        rodovia: "BR-381"
-    },
-    14: {
-        coordenadas: [-1.455, -48.5024],   // Pará
-        rodovia: "BR-316"
-    },
-    15: {
-        coordenadas: [-7.2404, -36.782],   // Paraíba
-        rodovia: "BR-101"
-    },
-    16: {
-        coordenadas: [-25.4284, -49.2733], // Paraná
-        rodovia: "BR-277"
-    },
-    17: {
-        coordenadas: [-8.0476, -34.877],   // Pernambuco
-        rodovia: "BR-232"
-    },
-    18: {
-        coordenadas: [-5.092, -42.8034],   // Piauí
-        rodovia: "BR-343"
-    },
-    19: {
-        coordenadas: [-22.9068, -43.1729], // Rio de Janeiro
-        rodovia: "BR-040"
-    },
-    20: {
-        coordenadas: [-5.7945, -35.211],   // Rio Grande do Norte
-        rodovia: "BR-101"
-    },
-    21: {
-        coordenadas: [-30.0346, -51.2177], // Rio Grande do Sul
-        rodovia: "BR-116"
-    },
-    22: {
-        coordenadas: [-8.7612, -63.9004],  // Rondônia
-        rodovia: "BR-364"
-    },
-    23: {
-        coordenadas: [2.8235, -60.6758],   // Roraima
-        rodovia: "BR-174"
-    },
-    24: {
-        coordenadas: [-27.5969, -48.5495], // Santa Catarina
-        rodovia: "BR-101"
-    },
-    25: {
-        coordenadas: [-23.5505, -46.6333], // São Paulo
-        rodovia: "SP-280"
-    },
-    26: {
-        coordenadas: [-10.9472, -37.0731], // Sergipe
-        rodovia: "BR-101"
-    },
-    27: {
-        coordenadas: [-10.1753, -48.2982], // Tocantins
-        rodovia: "BR-153"
-    }
-};
-
-// Objeto contendo informações fictícias de motoristas para cada estado
-var motoristasInfo = {
-    1: {
-        nome: "Alisson Rebite",
-        placa: "LOk-0000",
-        veiculo: "Scania G420",
-        implemento: "Carga Seca",
-        tempo: "4hrs m/s",
-        whatsapp: "+55123456789", // Exemplo de número de telefone para o WhatsApp
-    },
-    2: {
-        nome: "Carlos Andrade",
-        placa: "ABC-1234",
-        veiculo: "Volvo FH540",
-        implemento: "Baú Frigorífico",
-        tempo: "6hrs m/s",
-        whatsapp: "+55123456789", // Exemplo de número de telefone para o WhatsApp
-    },
-    3: {
-        nome: "Fernanda Souza",
-        placa: "XYZ-7890",
-        veiculo: "Iveco Hi-Way",
-        implemento: "Baú Carga Geral",
-        tempo: "5hrs m/s",
-        whatsapp: "+55123456789", // Exemplo de número de telefone para o WhatsApp
-    },
-    4: {
-        nome: "Bruno Lima",
-        placa: "QWE-5678",
-        veiculo: "DAF XF105",
-        implemento: "Graneleiro",
-        tempo: "7hrs m/s",
-        whatsapp: "+55123456789", // Exemplo de número de telefone para o WhatsApp
-    },
-    5: {
-        nome: "Marina Alves",
-        placa: "RTY-1234",
-        veiculo: "Mercedes-Benz Axor",
-        implemento: "Sider",
-        tempo: "8hrs m/s",
-        whatsapp: "+55123456789", // Exemplo de número de telefone para o WhatsApp
-    },
-    6: {
-        nome: "João Ferreira",
-        placa: "UIJ-3456",
-        veiculo: "Volkswagen Constellation",
-        implemento: "Porta Container",
-        tempo: "3hrs m/s",
-        whatsapp: "+55123456789", // Exemplo de número de telefone para o WhatsApp
-    },
-    7: {
-        nome: "Larissa Mendes",
-        placa: "POK-6789",
-        veiculo: "Ford Cargo",
-        implemento: "Tanque",
-        tempo: "9hrs m/s",
-        whatsapp: "+55123456789", // Exemplo de número de telefone para o WhatsApp
-    },
-    8: {
-        nome: "Marcelo Tavares",
-        placa: "LKU-4567",
-        veiculo: "MAN TGX",
-        implemento: "Baú Refrigerado",
-        tempo: "6hrs m/s",
-        whatsapp: "+55123456789", // Exemplo de número de telefone para o WhatsApp
-    },
-    9: {
-        nome: "Patrícia Souza",
-        placa: "IOH-8901",
-        veiculo: "Scania R450",
-        implemento: "Bitrem",
-        tempo: "5hrs m/s",
-        whatsapp: "+55123456789", // Exemplo de número de telefone para o WhatsApp
-    },
-    10: {
-        nome: "Roberto Silva",
-        placa: "MNB-2345",
-        veiculo: "Volvo FH460",
-        implemento: "Caçamba Basculante",
-        tempo: "2hrs m/s",
-        whatsapp: "+55123456789", // Exemplo de número de telefone para o WhatsApp
-    },
-    11: {
-        nome: "Ricardo Oliveira",
-        placa: "ZAQ-6789",
-        veiculo: "Mercedes-Benz Actros",
-        implemento: "Pipa",
-        tempo: "3hrs m/s",
-        whatsapp: "+55123456789", // Exemplo de número de telefone para o WhatsApp
-    },
-    12: {
-        nome: "Eduardo Santos",
-        placa: "WSX-3456",
-        veiculo: "Iveco Stralis",
-        implemento: "Toco",
-        tempo: "4hrs m/s",
-        whatsapp: "+55123456789", // Exemplo de número de telefone para o WhatsApp
-    },
-    13: {
-        nome: "Amanda Costa",
-        placa: "POI-7890",
-        veiculo: "Ford Cargo",
-        implemento: "Silo",
-        tempo: "7hrs m/s",
-        whatsapp: "+55123456789", // Exemplo de número de telefone para o WhatsApp
-    },
-    14: {
-        nome: "Lucas Oliveira",
-        placa: "JUY-1234",
-        veiculo: "Volvo FH540",
-        implemento: "Toco",
-        tempo: "5hrs m/s",
-        whatsapp: "+55123456789", // Exemplo de número de telefone para o WhatsApp
-    },
-    15: {
-        nome: "Juliana Santos",
-        placa: "HTG-5678",
-        veiculo: "Scania G380",
-        implemento: "Baú Lonado",
-        tempo: "4hrs m/s",
-        whatsapp: "+55123456789", // Exemplo de número de telefone para o WhatsApp
-    },
-    16: {
-        nome: "Rodrigo Almeida",
-        placa: "FDS-9012",
-        veiculo: "Mercedes-Benz Axor",
-        implemento: "Sider",
-        tempo: "8hrs m/s",
-        whatsapp: "+55123456789", // Exemplo de número de telefone para o WhatsApp
-    },
-    17: {
-        nome: "Carla Lima",
-        placa: "LKN-3456",
-        veiculo: "Volkswagen Constellation",
-        implemento: "Porta Container",
-        tempo: "3hrs m/s",
-        whatsapp: "+55123456789", // Exemplo de número de telefone para o WhatsApp
-    },
-    18: {
-        nome: "Marcos Silva",
-        placa: "UJH-6789",
-        veiculo: "MAN TGX",
-        implemento: "Tanque",
-        tempo: "9hrs m/s",
-        whatsapp: "+55123456789", // Exemplo de número de telefone para o WhatsApp
-    },
-    19: {
-        nome: "Ana Souza",
-        placa: "YTR-2345",
-        veiculo: "Scania R450",
-        implemento: "Baú Refrigerado",
-        tempo: "6hrs m/s",
-        whatsapp: "+55123456789", // Exemplo de número de telefone para o WhatsApp
-    },
-    20: {
-        nome: "João Pereira",
-        placa: "DFG-8901",
-        veiculo: "Volvo FH460",
-        implemento: "Bitrem",
-        tempo: "5hrs m/s",
-        whatsapp: "+55123456789", // Exemplo de número de telefone para o WhatsApp
-    },
-    21: {
-        nome: "Luana Oliveira",
-        placa: "TGB-6789",
-        veiculo: "Mercedes-Benz Actros",
-        implemento: "Caçamba Basculante",
-        tempo: "2hrs m/s",
-        whatsapp: "+55123456789", // Exemplo de número de telefone para o WhatsApp
-    },
-    22: {
-        nome: "Daniel Santos",
-        placa: "CVB-3456",
-        veiculo: "Iveco Stralis",
-        implemento: "Pipa",
-        tempo: "3hrs m/s",
-        whatsapp: "+55123456789", // Exemplo de número de telefone para o WhatsApp
-    },
-    23: {
-        nome: "Camila Costa",
-        placa: "YHN-7890",
-        veiculo: "Ford Cargo",
-        implemento: "Silo",
-        tempo: "7hrs m/s",
-        whatsapp: "+55123456789", // Exemplo de número de telefone para o WhatsApp
-    },
-    24: {
-        nome: "Pedro Oliveira",
-        placa: "BGT-1234",
-        veiculo: "Volvo FH540",
-        implemento: "Toco",
-        tempo: "5hrs m/s",
-        whatsapp: "+55123456789", // Exemplo de número de telefone para o WhatsApp
-    },
-    25: {
-        nome: "Mariana Almeida",
-        placa: "ZXC-5678",
-        veiculo: "Scania G380",
-        implemento: "Baú Lonado",
-        tempo: "4hrs m/s",
-        whatsapp: "+55123456789", // Exemplo de número de telefone para o WhatsApp
-    },
-    26: {
-        nome: "Gabriel Lima",
-        placa: "NMB-9012",
-        veiculo: "Mercedes-Benz Axor",
-        implemento: "Sider",
-        tempo: "8hrs m/s",
-        whatsapp: "+55123456789", // Exemplo de número de telefone para o WhatsApp
-    },
-    27: {
-        nome: "Fernanda Oliveira",
-        placa: "WQE-3456",
-        veiculo: "Volkswagen Constellation",
-        implemento: "Porta Container",
-        tempo: "3hrs m/s",
-        whatsapp: "+55123456789", // Exemplo de número de telefone para o WhatsApp
-    },
-};
-
-// Adiciona um seletor de estados no HTML
-var selectEstado = document.createElement('select');
-selectEstado.id = 'seletorCombo';
-
-// Cria a opção padrão
-var defaultOption = document.createElement('option');
-defaultOption.value = '';
-defaultOption.text = 'Selecione um estado';
-selectEstado.appendChild(defaultOption);
-
-// Adiciona as opções de estados ao seletor
-for (var estadoId in estadosCoordenadas) {
-    var option = document.createElement('option');
-    option.value = estadoId;
-    option.text = "Estado " + estadoId; // Substitua pelo nome do estado se necessário
-    selectEstado.appendChild(option);
-}
-
-// Adiciona o seletor ao corpo do documento
-document.body.appendChild(selectEstado);
-
-// Adiciona evento de mudança ao seletor
-document.getElementById('seletorCombo').addEventListener('change', function() {
-    var estadoId = this.value;
-
-    // Limpa todos os marcadores do mapa
-    map.eachLayer(function(layer) {
-        if (layer instanceof L.Marker) {
-            map.removeLayer(layer);
-        }
+    <script>
+    // Inicializa o mapa
+    var map = L.map("map_6146f48e63c26298b0cdfeb6cf7cb288", {
+        center: [-15.7797, -47.9297], // Centraliza o mapa no Distrito Federal
+        zoom: 5,
+        zoomControl: false,
+        preferCanvas: false,
     });
 
-    // Se um estado válido for selecionado, adiciona um novo marcador
-    if (estadosCoordenadas[estadoId]) {
-        var coordenadas = estadosCoordenadas[estadoId].coordenadas;
-        var rodovia = estadosCoordenadas[estadoId].rodovia;
+    // Adiciona camada de tiles ao mapa
+    L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+        attribution: "Data by © OpenStreetMap, under ODbL.",
+        maxNativeZoom: 18,
+        maxZoom: 18,
+    }).addTo(map);
 
-        var marker = L.marker(coordenadas).addTo(map);
-        map.setView(coordenadas, 8); // Ajusta o zoom e centra o mapa nas coordenadas do estado
+    // Objeto contendo coordenadas dos estados com suas rodovias
+    var estadosCoordenadas = {
+        1: {
+            coordenadas: [-9.0238, -70.812],   // Acre
+            rodovia: "BR-364"
+        },
+        2: {
+            coordenadas: [-9.5713, -36.782],   // Alagoas
+            rodovia: "BR-101"
+        },
+        3: {
+            coordenadas: [0.902, -52.003],     // Amapá
+            rodovia: "BR-156"
+        },
+        4: {
+            coordenadas: [-3.4168, -65.856],   // Amazonas
+            rodovia: "BR-319"
+        },
+        5: {
+            coordenadas: [-12.9714, -38.5014], // Bahia
+            rodovia: "BR-116"
+        },
+        6: {
+            coordenadas: [-3.7172, -38.5434],  // Ceará
+            rodovia: "BR-116"
+        },
+        7: {
+            coordenadas: [-15.7797, -47.9297], // Distrito Federal
+            rodovia: "BR-060"
+        },
+        8: {
+            coordenadas: [-19.1834, -40.3089], // Espírito Santo
+            rodovia: "BR-101"
+        },
+        9: {
+            coordenadas: [-16.6869, -49.2643], // Goiás
+            rodovia: "BR-153"
+        },
+        10: {
+            coordenadas: [-2.5387, -44.2825],  // Maranhão
+            rodovia: "BR-135"
+        },
+        11: {
+            coordenadas: [-12.6819, -56.9211], // Mato Grosso
+            rodovia: "BR-163"
+        },
+        12: {
+            coordenadas: [-20.4435, -54.6478], // Mato Grosso do Sul
+            rodovia: "BR-163"
+        },
+        13: {
+            coordenadas: [-19.9167, -43.9345], // Minas Gerais
+            rodovia: "BR-381"
+        },
+        14: {
+            coordenadas: [-1.455, -48.5024],   // Pará
+            rodovia: "BR-316"
+        },
+        15: {
+            coordenadas: [-7.2404, -36.782],   // Paraíba
+            rodovia: "BR-101"
+        },
+        16: {
+            coordenadas: [-25.4284, -49.2733], // Paraná
+            rodovia: "BR-277"
+        },
+        17: {
+            coordenadas: [-8.0476, -34.877],   // Pernambuco
+            rodovia: "BR-232"
+        },
+        18: {
+            coordenadas: [-5.092, -42.8034],   // Piauí
+            rodovia: "BR-343"
+        },
+        19: {
+            coordenadas: [-22.9068, -43.1729], // Rio de Janeiro
+            rodovia: "BR-040"
+        },
+        20: {
+            coordenadas: [-5.7945, -35.211],   // Rio Grande do Norte
+            rodovia: "BR-101"
+        },
+        21: {
+            coordenadas: [-30.0346, -51.2177], // Rio Grande do Sul
+            rodovia: "BR-116"
+        },
+        22: {
+            coordenadas: [-8.7612, -63.9004],  // Rondônia
+            rodovia: "BR-364"
+        },
+        23: {
+            coordenadas: [2.8235, -60.6758],   // Roraima
+            rodovia: "BR-174"
+        },
+        24: {
+            coordenadas: [-27.5969, -48.5495], // Santa Catarina
+            rodovia: "BR-101"
+        },
+        25: {
+            coordenadas: [-23.5505, -46.6333], // São Paulo
+            rodovia: "SP-280"
+        },
+        26: {
+            coordenadas: [-10.9472, -37.0731], // Sergipe
+            rodovia: "BR-101"
+        },
+        27: {
+            coordenadas: [-10.1753, -48.2982], // Tocantins
+            rodovia: "BR-153"
+        }
+    };
 
-        // Cria o conteúdo do popup com informações do motorista e botões
-        var motorista = motoristasInfo[estadoId];
-        var popupContent = `
-            <strong>Rodovia:</strong> ${rodovia}<br>
-            <strong>Motorista:</strong> ${motorista.nome}<br>
-            <strong>Placa:</strong> ${motorista.placa}<br>
-            <strong>Veículo:</strong> ${motorista.veiculo}<br>
-            <strong>Implemento:</strong> ${motorista.implemento}<br>
-            <strong>Em Trânsito:</strong> ${motorista.tempo}<br><br>         
-            <button onclick="openWhatsApp('https://wa.me/${motorista.whatsapp}')">
-                <i class="fab fa-whatsapp"></i> WhatsApp
-            </button>
+    // Objeto contendo informações fictícias de motoristas para cada estado
+    var motoristasInfo = {
+        1: {
+            nome: "Alisson Anderle",
+            placa: "LOk-0000",
+            veiculo: "Scania G420",
+            implemento: "Carga Seca",
+            tempo: "4hrs m/s",
+            whatsapp: "+55123456789", // Exemplo de número de telefone para o WhatsApp
+        },
+        2: {
+            nome: "Carlos Andrade",
+            placa: "ABC-1234",
+            veiculo: "Volvo FH540",
+            implemento: "Baú Frigorífico",
+            tempo: "6hrs m/s",
+            whatsapp: "+55123456789", // Exemplo de número de telefone para o WhatsApp
+        },
+        3: {
+            nome: "Fernanda Souza",
+            placa: "XYZ-7890",
+            veiculo: "Iveco Hi-Way",
+            implemento: "Baú Carga Geral",
+            tempo: "5hrs m/s",
+            whatsapp: "+55123456789", // Exemplo de número de telefone para o WhatsApp
+        },
+        4: {
+            nome: "Bruno Lima",
+            placa: "QWE-5678",
+            veiculo: "DAF XF105",
+            implemento: "Graneleiro",
+            tempo: "7hrs m/s",
+            whatsapp: "+55123456789", // Exemplo de número de telefone para o WhatsApp
+        },
+        5: {
+            nome: "Marina Alves",
+            placa: "RTY-1234",
+            veiculo: "Mercedes-Benz Axor",
+            implemento: "Sider",
+            tempo: "8hrs m/s",
+            whatsapp: "+55123456789", // Exemplo de número de telefone para o WhatsApp
+        },
+        6: {
+            nome: "João Ferreira",
+            placa: "UIJ-3456",
+            veiculo: "Volkswagen Constellation",
+            implemento: "Porta Container",
+            tempo: "3hrs m/s",
+            whatsapp: "+55123456789", // Exemplo de número de telefone para o WhatsApp
+        },
+        7: {
+            nome: "Larissa Mendes",
+            placa: "POK-6789",
+            veiculo: "Ford Cargo",
+            implemento: "Tanque",
+            tempo: "9hrs m/s",
+            whatsapp: "+55123456789", // Exemplo de número de telefone para o WhatsApp
+        },
+        8: {
+            nome: "Marcelo Tavares",
+            placa: "LKU-4567",
+            veiculo: "MAN TGX",
+            implemento: "Baú Refrigerado",
+            tempo: "6hrs m/s",
+            whatsapp: "+55123456789", // Exemplo de número de telefone para o WhatsApp
+        },
+        9: {
+            nome: "Patrícia Souza",
+            placa: "IOH-8901",
+            veiculo: "Scania R450",
+            implemento: "Bitrem",
+            tempo: "5hrs m/s",
+            whatsapp: "+55123456789", // Exemplo de número de telefone para o WhatsApp
+        },
+        10: {
+            nome: "Roberto Silva",
+            placa: "MNB-2345",
+            veiculo: "Volvo FH460",
+            implemento: "Caçamba Basculante",
+            tempo: "2hrs m/s",
+            whatsapp: "+55123456789", // Exemplo de número de telefone para o WhatsApp
+        },
+        11: {
+            nome: "Ricardo Oliveira",
+            placa: "ZAQ-6789",
+            veiculo: "Mercedes-Benz Actros",
+            implemento: "Pipa",
+            tempo: "3hrs m/s",
+            whatsapp: "+55123456789", // Exemplo de número de telefone para o WhatsApp
+        },
+        12: {
+            nome: "Eduardo Santos",
+            placa: "WSX-3456",
+            veiculo: "Iveco Stralis",
+            implemento: "Toco",
+            tempo: "4hrs m/s",
+            whatsapp: "+55123456789", // Exemplo de número de telefone para o WhatsApp
+        },
+        13: {
+            nome: "Amanda Costa",
+            placa: "POI-7890",
+            veiculo: "Ford Cargo",
+            implemento: "Silo",
+            tempo: "7hrs m/s",
+            whatsapp: "+55123456789", // Exemplo de número de telefone para o WhatsApp
+        },
+        14: {
+            nome: "Lucas Oliveira",
+            placa: "JUY-1234",
+            veiculo: "Volvo FH540",
+            implemento: "Toco",
+            tempo: "5hrs m/s",
+            whatsapp: "+55123456789", // Exemplo de número de telefone para o WhatsApp
+        },
+        15: {
+            nome: "Juliana Santos",
+            placa: "HTG-5678",
+            veiculo: "Scania G380",
+            implemento: "Baú Lonado",
+            tempo: "4hrs m/s",
+            whatsapp: "+55123456789", // Exemplo de número de telefone para o WhatsApp
+        },
+        16: {
+            nome: "Rodrigo Almeida",
+            placa: "FDS-9012",
+            veiculo: "Mercedes-Benz Axor",
+            implemento: "Sider",
+            tempo: "8hrs m/s",
+            whatsapp: "+55123456789", // Exemplo de número de telefone para o WhatsApp
+        },
+        17: {
+            nome: "Carla Lima",
+            placa: "LKN-3456",
+            veiculo: "Volkswagen Constellation",
+            implemento: "Porta Container",
+            tempo: "3hrs m/s",
+            whatsapp: "+55123456789", // Exemplo de número de telefone para o WhatsApp
+        },
+        18: {
+            nome: "Marcos Silva",
+            placa: "UJH-6789",
+            veiculo: "MAN TGX",
+            implemento: "Tanque",
+            tempo: "9hrs m/s",
+            whatsapp: "+55123456789", // Exemplo de número de telefone para o WhatsApp
+        },
+        19: {
+            nome: "Ana Souza",
+            placa: "YTR-2345",
+            veiculo: "Scania R450",
+            implemento: "Baú Refrigerado",
+            tempo: "6hrs m/s",
+            whatsapp: "+55123456789", // Exemplo de número de telefone para o WhatsApp
+        },
+        20: {
+            nome: "João Pereira",
+            placa: "DFG-8901",
+            veiculo: "Volvo FH460",
+            implemento: "Bitrem",
+            tempo: "5hrs m/s",
+            whatsapp: "+55123456789", // Exemplo de número de telefone para o WhatsApp
+        },
+        21: {
+            nome: "Luana Oliveira",
+            placa: "TGB-6789",
+            veiculo: "Mercedes-Benz Actros",
+            implemento: "Caçamba Basculante",
+            tempo: "2hrs m/s",
+            whatsapp: "+55123456789", // Exemplo de número de telefone para o WhatsApp
+        },
+        22: {
+            nome: "Daniel Santos",
+            placa: "CVB-3456",
+            veiculo: "Iveco Stralis",
+            implemento: "Pipa",
+            tempo: "3hrs m/s",
+            whatsapp: "+55123456789", // Exemplo de número de telefone para o WhatsApp
+        },
+        23: {
+            nome: "Camila Costa",
+            placa: "YHN-7890",
+            veiculo: "Ford Cargo",
+            implemento: "Silo",
+            tempo: "7hrs m/s",
+            whatsapp: "+55123456789", // Exemplo de número de telefone para o WhatsApp
+        },
+        24: {
+            nome: "Pedro Oliveira",
+            placa: "BGT-1234",
+            veiculo: "Volvo FH540",
+            implemento: "Toco",
+            tempo: "5hrs m/s",
+            whatsapp: "+55123456789", // Exemplo de número de telefone para o WhatsApp
+        },
+        25: {
+            nome: "Mariana Almeida",
+            placa: "ZXC-5678",
+            veiculo: "Scania G380",
+            implemento: "Baú Lonado",
+            tempo: "4hrs m/s",
+            whatsapp: "+55123456789", // Exemplo de número de telefone para o WhatsApp
+        },
+        26: {
+            nome: "Gabriel Lima",
+            placa: "NMB-9012",
+            veiculo: "Mercedes-Benz Axor",
+            implemento: "Sider",
+            tempo: "8hrs m/s",
+            whatsapp: "+55123456789", // Exemplo de número de telefone para o WhatsApp
+        },
+        27: {
+            nome: "Fernanda Oliveira",
+            placa: "WQE-3456",
+            veiculo: "Volkswagen Constellation",
+            implemento: "Porta Container",
+            tempo: "3hrs m/s",
+            whatsapp: "+55123456789", // Exemplo de número de telefone para o WhatsApp
+        },
+    };
 
-            <button onclick="window.open('rastreamento.html', '_blank')">
-                Registro
-            </button>
-        `;
+    var selectEstado = document.createElement('select');
+    selectEstado.id = 'seletorCombo';
+    selectEstado.style.display = 'none';  // Esconde o seletor
 
-        marker.bindPopup(popupContent).openPopup();
+    // Cria a opção padrão
+    var defaultOption = document.createElement('option');
+    defaultOption.value = '';
+    defaultOption.text = 'Selecione um estado';
+    selectEstado.appendChild(defaultOption);
+
+    // Adiciona as opções de estados ao seletor
+    for (var estadoId in estadosCoordenadas) {
+        var option = document.createElement('option');
+        option.value = estadoId;
+        option.text = "Estado " + estadoId; // Substitua pelo nome do estado se necessário
+        selectEstado.appendChild(option);
     }
-});
-function openWhatsApp(url) {
-    window.open(url, '_blank');
-}
 
-</script>
+    // Adiciona o seletor ao corpo do documento
+    document.body.appendChild(selectEstado);
+
+    // Adiciona evento de mudança ao seletor
+    document.getElementById('seletorCombo').addEventListener('change', function() {
+        var estadoId = this.value;
+
+        // Limpa todos os marcadores do mapa
+        map.eachLayer(function(layer) {
+            if (layer instanceof L.Marker) {
+                map.removeLayer(layer);
+            }
+        });
+
+        // Se um estado válido for selecionado, adiciona um novo marcador
+        if (estadosCoordenadas[estadoId]) {
+            var coordenadas = estadosCoordenadas[estadoId].coordenadas;
+            var rodovia = estadosCoordenadas[estadoId].rodovia;
+
+            var marker = L.marker(coordenadas).addTo(map);
+            map.setView(coordenadas, 8); // Ajusta o zoom e centra o mapa nas coordenadas do estado
+
+            // Cria o conteúdo do popup com informações do motorista e botões
+            var motorista = motoristasInfo[estadoId];
+            var popupContent = `
+                <strong>Rodovia:</strong> ${rodovia}<br>
+                <strong>Motorista:</strong> ${motorista.nome}<br>
+                <strong>Placa:</strong> ${motorista.placa}<br>
+                <strong>Veículo:</strong> ${motorista.veiculo}<br>
+                <strong>Implemento:</strong> ${motorista.implemento}<br>
+                <strong>Em Trânsito:</strong> ${motorista.tempo}<br><br>         
+                <button onclick="openWhatsApp('https://wa.me/${motorista.whatsapp}')">
+                    <i class="fab fa-whatsapp"></i> WhatsApp
+                </button>
+
+                <button onclick="window.open('rastreamento.html', '_blank')">
+                    Registro
+                </button>
+            `;
+
+            marker.bindPopup(popupContent).openPopup();
+        }
+    });
+    function openWhatsApp(url) {
+        window.open(url, '_blank');
+    }
+
+    </script>
+</body>
 </html>
